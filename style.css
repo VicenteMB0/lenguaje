@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Estilo del header */
+header {
+  display: flexbox;
+
+  align-items: center; /* Alinea verticalmente el contenido */
+  height: 100vh;
+  width: 100%;
+  color: #ffffff; /* Texto Blanco */
+  /*background-color: rgba(0, 0, 0, 0.487);*/
+  /*position: relative;*/ /* Importante para el video */
+}
+
+.icono {
+  font-size: 40px;
+  cursor: pointer;
+}
+/* El logo a la izquierda */
+/* .logo {
+    flex: 1;
+} */
+
+/* Centrar el menú de navegación */
+header nav {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  display: flex;
+  justify-content: space-between; /* Centra el menú de navegación */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.487);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 100px; /* Espacio entre los elementos del menú */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header nav ul li a:hover {
+  color: #658fd2; /* Verde Menta para hover */
+}
+
+/* Estilo de los botones de autenticación */
+.auth-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Alinea los botones a la derecha */
+  gap: 20px;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  color: #ffffff; /* Texto Blanco */
+  background-color: rgba(30, 127, 165, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons a:hover {
+  background-color: #68afdb;
+}
+
+/* Video banner detrás */
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra todo el espacio */
+}
+
+.logo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centra el texto horizontal y verticalmente */
+  text-align: center; /* Alinea el texto al centro */
+  z-index: 2; /* Para asegurarse de que esté sobre el video */
+  color: #ffffff;
+  font-size: 40px;
+}
+.titulo h1 {
+  margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
+  border-style: solid;
+  border-color: azure;
+}
+
+.titulo p {
+  display: block;
+  padding-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*estilo de la bienvenida*/
+.cont_bienvenida {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cont_bienvenida p {
+  padding-left: 25%;
+  padding-right: 25%;
+  font-size: 20px;
+  line-height: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*estilo del sabias que*/
+.cont_sabiasque {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(134, 170, 255);
+}
+
+.cont_sabiasque h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cont_sabiasque p {
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cont_sabiasque img {
+  width: 450px;
+  height: 450px;
+}
+/*Estilo del video de presentación*/
+.cont_video_pres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cont_video_pres div {
+  width: 50%;
+}
+
+/* Estilo del menú desplegable de autenticación */
+.auth-menu {
+  height: 100%;
+  width: 250px;
+  position: absolute;
+  top: 187px; /* Ajusta esta distancia desde la parte superior */
+  right: 0px; /* Ajusta esta distancia desde el lado derecho */
+  background-color: rgba(0, 0, 0, 0.487);
+  padding: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* disposición de los elementos */
+  display: flex;
+  /*disposicion de los elementos se defin si ira como columna o como fila */
+  flex-direction: column;
+  /*espacio entre los elementos */
+  gap: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-menu a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.auth-menu a:hover {
+  background-color: #c9c8c8;
+}
+
+/* Oculta el menú inicialmente */
+.hidden {
+  display: none;
+}
+
+.imagen {
+  border-radius: 20px;
+}
+
+/* Animación de fade-in (aparece lentamente) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Inicialmente todos los elementos estarán ocultos */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+/* Cuando los elementos se hagan visibles */
+.animate.visible {
+  animation: fadeIn 0.6s forwards;
+}
